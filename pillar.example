@@ -1,0 +1,5 @@
+# Pillar example for grails formula.
+# Very basic right now. Would like to expand this to support dependencies
+
+grails:
+    version: '2.5.3'

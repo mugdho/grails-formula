@@ -1,0 +1,22 @@
+{%
+    set default_settings = {
+        'grails': {
+            'version': '2.5.3',
+            'base_download_url': 'https://github.com/grails/grails-core/releases/download/',
+            'tmp_dir': '/tmp',
+            'install_base': '/usr/local/grails',
+            'link_to_bin': [
+                {
+                    'name': 'grails',
+                    'path': 'bin/grails'
+                },{
+                    'name': 'startGrails',
+                    'path': 'bin/startGrails'
+                }
+            ]
+        }
+    }
+%}
+
+{% set grails = salt['pillar.get']('grails',
+    default=default_settings.grails, merge=True)  %}
